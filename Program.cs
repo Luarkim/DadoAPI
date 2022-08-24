@@ -19,7 +19,7 @@ app.MapGet("/dado/d{numeroDeFaces}", (
 ) => {
 if (numeroDeFaces <=0)
 {
-    return Results.BadRequest(new { mensagem = "Não existe dado de 0 lados capeta"});
+    return Results.BadRequest(new { mensagem = "Não existe dado com 0 lado"});
 }
 int face = RandomNumberGenerator.GetInt32(1, numeroDeFaces + 1);
 
